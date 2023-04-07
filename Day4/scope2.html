@@ -1,0 +1,23 @@
+<html>
+    <h3>Day 4</h3>
+    <ol>
+        <li>Global scope</li>
+    </ol>
+
+    <script>
+        
+        console.log("Data",data);
+
+        function hello()
+        {
+            console.log("Hello World");
+            second = 500; //Global
+        }
+
+        var data = 900;
+        console.log("second ==",window.second);
+        hello();
+        console.log("second ",second);
+
+    </script>
+</html>

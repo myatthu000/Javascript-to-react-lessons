@@ -1,0 +1,58 @@
+<html>
+    <h3>Expression</h3>
+    <ol>
+        <li>Expression (can return || value)
+            <ol>
+                <!-- Define if operator has or not let a = 9 + 4; -->
+                <li>Simple Expression</li>
+                <li>Complex Expression</li>
+            </ol>
+        </li>
+        <li>Fully Meaning called (Statement) <em>eg: let data = "something";</em> </li>
+        <li>Object initializer</li>
+        <li>array initializer</li>
+        <li>function definitation expression</li>
+        <li> Object = {property:value;} </li>
+        <li>Function call or Invocation Expression <em>eg. welcome() </em> </li>
+        <li>Conditional Invocation <em> eg.k?.() </em> </li>
+        <!-- property literally called object variable -->
+    </ol>
+
+    <script>
+//                Statement   
+//       ___________|_____________
+//      |                       |
+//                    Expression
+        let data = "Something";
+        let a = 2;
+        
+        // let obj = {} object lateral expression
+
+        //obj initializer
+        let obj = {
+            name : 'something',
+        }
+
+        //array initializer
+        let arr1 = [100,200];
+
+        //function definitation expression
+        let welcome = function()
+        {
+            console.log("hello world");
+        }
+
+        welcome(); //function call or function Invocation expression
+
+
+        let k;
+        //k()
+        k?.(); // Conditional Invocation
+
+        //value  ပြန်ပေးရင် expression
+
+
+
+
+    </script>
+</html>

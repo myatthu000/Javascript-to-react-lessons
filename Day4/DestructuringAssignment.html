@@ -1,0 +1,23 @@
+<html>
+    <h3>Destructuring Assignment</h3>
+    <ol>
+        <li>Variable Destructuring</li>
+        <li>Array Destructuring</li>
+    </ol>
+    <script>
+        let a = 10;
+        let b = 20;
+        let e;
+        console.log("a = ",a,"b = ",b);
+        // let [c,d] = [1000,500]; //Array Destructuring
+        let [c,d] = [a,b];
+        console.log("c = ",c,"d = ",d);
+        
+        e = a;
+        a = b;
+        b = e;
+        console.log("a = ",a,"b = ",b);
+
+
+    </script>
+</html>

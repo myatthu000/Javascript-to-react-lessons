@@ -1,0 +1,45 @@
+<html>
+    <h3>#Notes: Day 4</h3>
+    <ol>
+        <li><span><b>Scope</b></span><p>Scope : A variable cannot use beyound its region</p></li>
+        <li><b>"var"</b>function scope
+            <p>var သည် function ရဲ့မည်သည့် နေရာမှာပဲ ကြေညာ ပြန် သုံး လို့ရသည်။ </p>
+        </li>
+        <li><b>Hoisting</b> -declaration <b>( not assign value )</b> ကို function ရဲ့ အပေါ်ဆုံး နေရာကို တင်ပေးသွားတာကို <b>Hoistiong</b> လို့ခေါ် ။ Hoisting works on function scope, not on block scope </li>
+    </ol>
+    <div>
+        Scope 2 types
+            1.function scope
+                - var
+                - Hoisting 
+                - can redeclare anywhere
+            2.block scope
+                - let const
+                - can only redeclare in different block
+    </div>
+
+    <script>
+        // this is (script scope) Global scope
+        // Scope
+        // Can use variable in a specific region or A variable cannot use beyound its region
+
+        function hello()
+        {   // this is function scope/ block scope start
+            console.log("data",data)
+            let c = 20;
+            console.log("hello")
+            {
+                let c = 9000;
+                console.log(c)
+                console.log("data",data)
+
+                var data = 111;
+            }
+
+            console.log("data",data)
+           
+            // this is function scope/ block scope end
+        }
+        hello();
+    </script>
+</html>

@@ -1,0 +1,36 @@
+<html>
+    <h3>Object Destructuring</h3>
+    <ol>
+        <li>Object Destructuring
+            <ul>
+                <li>dot [.] notation (statically) <em>object.name</em></li>
+                <li>bracket notation (dynamically) <em>object['property']</em></li>
+            </ul>
+        </li>
+    </ol>
+
+    <script>
+       
+        let obj = {
+            name : 'tk',
+            age : 38,
+            address: {
+                city: "Yangon",
+            }
+        }
+
+        /*
+        let name = obj.name;
+        let age = obj.age;
+        */
+
+        let {name:Myname,age:Myage} = obj;
+        //console.log("name-- ",Myname,"age-- ",Myage);
+
+        let property = 'address';
+        console.log("dynamically -- ",obj[property]['city']); //dynamically property
+        console.log("statically -- ",obj.address?.city); // statically အသေ
+
+
+    </script>
+</html>
