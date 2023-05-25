@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <h3>Function as Class</h3>
+
+        <script>
+
+            function Human(name,age)
+            {
+                this.name = name
+                this.age = age
+
+                this.work = function(){
+                    console.log("Name ",this.name,"Age ",this.age)
+                }
+            }
+
+            let obj1 = new Human("Tk",38)
+            let obj2 = new Human("Tk2",23)
+
+            obj1.work()
+            obj2.work()
+        </script>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <h3>Adding Method to existing class</h3>
+        <script>
+
+            String.prototype.getData = function(){
+                return this.toString();
+            }
+
+            let str = "Hellow";
+            console.log(str.getData());
+            
+        </script>
+    </body>
+</html>

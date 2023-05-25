@@ -1,0 +1,27 @@
+<html>
+    <h3>Composition or Deligation Vs Inheritance</h3>
+    <script>
+
+        class Engine{
+            start(){
+                console.log("Engine start ...");
+            }
+        }
+
+        class Car{
+            constructor(){
+                this.engine = new Engine();
+                console.log("Constructor of Car")
+            }
+
+            start(){
+                console.log("Car start ...");
+                this.engine.start();
+            }
+        }
+
+        let car = new Car();
+        car.start()
+
+    </script>
+</html>

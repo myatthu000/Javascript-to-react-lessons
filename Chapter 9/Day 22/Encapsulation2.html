@@ -1,0 +1,38 @@
+<html>
+    <body>
+        <h3>Encapsulation 2</h3>
+
+        <script>
+            class BankAccount{
+                constructor(){
+                    this.balance = 0;
+                }
+
+                credit(amount){
+                    if( amount>=0){
+                        this.balance += amount
+                    }
+                }
+
+                debit(amount){
+                    if(this.balance >= amount && amount >= 0){
+                        this.balance -= amount
+                    }
+                }
+
+                toString(){
+                    return "Account["+this.balance+"]";
+                }
+            }
+
+            let acc1 = new BankAccount();
+            acc1.credit(900);
+            acc1.debit(1000);
+            console.log("A 1",acc1)
+            console.log("A 1",acc1.toString())
+            
+
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+    <body>
+        <h3>Encapsulation</h3>
+        
+        <!-- 
+            Encapsulation : working on its own property
+            Inheritance : Code re-use eg:Human class and Teacher class
+                          behaviour(property, method) re-use
+         -->
+
+        <script>
+            
+            class Stack{
+                constructor(){
+                    this.items = []
+                }
+
+                push(element){
+                    this.items.push(element)
+                }
+
+                pop(element){
+                    return this.items.pop()
+                }
+            }
+
+            let st = new Stack();
+            st.push("yot 1")
+            st.push("yot 2")
+            console.log('st pop = ',st.pop())
+            st.pop()
+            console.log('st pop = ',st.pop())
+        </script>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+Chapter 3 notes
+    Types, Variable, Values
+
+        types
+            primitive type (basic type)
+                null
+                stirng
+                number
+                boolean
+                undefined
+                symbol
+            object type
+
+

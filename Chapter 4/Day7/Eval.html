@@ -1,0 +1,53 @@
+<html>
+    
+    <h3>Statement</h3>
+    <ol>
+        <li>
+            Eval
+            <ul>
+                <li>eval is evil. JS (dynamic) expression တွေကို string ထဲမှာအလုပ်လုပ်ပေးရတာဖြစ်လို့ damage ဖြစ်တယ်။ (cmd injection,RcE,....) </li>
+            </ul>
+        </li>
+        <li>Conditional
+            <ul>
+                <li>Ternarary operator (condition) ? 'a' : 'b' </li>
+                <li>Define operator ?? null or undefined checking operator</li>
+                <li><a href="./TypeOf.html">Type of Operator</a></li>
+            </ul>
+        </li>
+        <li><a href="./Delete.html">Delete</a></li>
+        <li><a href="./void.html">void</a></li>
+    </ol>
+
+    <script>
+        //Eval
+        // let str = "alert('Something'), 1+2";    //dynamic expression
+        let str = "1+2";    //dynamic expression
+        let result = eval(str);
+        console.log('Result ',result)
+
+        //Ternarary operator
+        let num = 3;
+        let evenOrOdd = num % 2 === 0 ? 'Even' : 'Odd';
+        console.log('Event or Odd = ',evenOrOdd)
+
+        //Define operator ?? null or undefined checking operator
+
+        let maxWidth = 0;
+        let preferences = {
+            maxWidth: 1234
+        }
+        // let max = maxWidth || preferences.maxWidth || 500;
+        let max = maxWidth ?? preferences.maxWidth ?? 500;
+        console.log('Max ',max);
+
+        let options = {
+            title: 'Title'
+        };
+
+        let data = options.data ?? 'data';
+        console.log('Data = ',data)
+
+    </script>
+
+</html>

@@ -1,0 +1,31 @@
+OOP
+    Encapsulation : writing on its own property
+    Inheritance : reuse/behaviour code
+    Polymorphism : overwrite method
+    //... 3.1
+    Static method : It don't need to create object and can directly use from method of a class name is static method
+    Getter and Setter
+    Public, Private
+    constructor --> super()
+    Deligation or Composition (Transfer my responsibility to another) Composition Vs Inheritance
+    OpenClose principle {
+        Inversion of control or
+        Dependency Inversion/ Injection (Composition ko a pyin ka saut twar tr)
+    }
+
+
+
+
+3.1
+{
+    Polymorphism {
+        
+        subtyping
+            super type reference
+                subtype
+
+
+        Ducktyping (exit in dynamic programming language)
+    }
+}
+

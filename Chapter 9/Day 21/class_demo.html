@@ -1,0 +1,68 @@
+<html>
+    <body>
+        <h3>OOP</h3>
+        <h3>Class, constructor, </h3>
+        <h3>Inheritance</h3>
+        <h3>Encapsulation</h3>
+        <h3>Polymorphism</h3>
+        <ol>
+            <li>Subtyping</li>
+            <li>Duck typing</li>
+        </ol>
+        <h3>Static Method</h3>
+        <h3>Getter, Setter</h3>
+        <h3>Public, Private</h3>
+        <h3>Delication or Composition/ Composition instead of Inheritance </h3>
+        <h3>Composition vs Inheritance</h3>
+        <h3>OpenClose Principle</h3>
+        <h3>Abstract Class</h3>
+
+        <script>
+
+            class Human{
+                
+                constructor(name,age){
+                    this.name = name
+                    this.age = age
+                }
+
+                work(){
+                    console.log("This is Name = ",this.name)
+                }
+
+                display(){
+                    console.log("Name = ",this.name,"Age = ",this.age)
+                }
+            }
+
+            let obj1 = new Human('Another',23)
+            let obj2 = new Human('Another',20)
+
+            console.log('obj1 = ',obj1)
+            console.log('obj2 = ',obj2)
+
+
+            obj1.work();
+            obj1.display();
+
+            obj2.work();
+            obj2.display();
+
+            // Inheritance class : code reuse / behaviour reuse
+            class Teacher extends Human{
+                
+                constructor(name,age,school){
+                    super(name,age)
+                    this.school = school
+                }
+            }
+
+            let obj_t1 = new Teacher('U Mya Thaung',58,"YIT")
+            obj_t1.work()
+            obj_t1.display()
+
+            
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+    <h3>Polymorphism</h3>
+    <p>
+        To get parent methods of class call with --super.draw()--
+    </p>
+
+    <script>
+        
+        class Shape{
+            
+            constructor(){
+                console.log("Shape Constructor");
+            }
+            draw()
+            {
+                console.log("Draw shape : ");
+            }
+        }
+
+        // Circle class overwrite draw method of shape
+        class Circle extends Shape{
+
+            constructor(){
+                super();
+                console.log("Circle Constructor");
+            }
+            draw(){
+                super.draw();
+                this.anotherMethod();
+                console.log("Draw Circle");
+            }
+            anotherMethod(){
+                console.log("Another Method of circle");
+            }
+        }
+
+        // Rectangle class overwrite draw method of shape
+        class Rectangle extends Shape{
+            
+            draw(){
+                super.draw();
+                console.log("Draw Rectangle");
+            }
+        }
+
+        let shape = new Circle();
+        shape.draw();
+
+        let shape2 = new Rectangle();
+        shape2.draw();
+
+        // dynamic programming language can use like this (Duck typing)
+        shape = {
+            draw(){
+                console.log("Another draw");
+            }
+        }
+        shape.draw();
+
+    </script>
+</html>

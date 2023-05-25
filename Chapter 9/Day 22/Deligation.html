@@ -1,0 +1,46 @@
+<html>
+    <body>
+        <h3>Deligation or Composition</h3>
+        <!-- 
+            Deligation instead of Inheritance(reuse code)
+            Deligation or Composition (Transfer my responsibility to another)
+
+            Use cases : Problem of Inheritance is can use data to parent Class, 
+                        Literally mean break the rules of Encapsulation,
+         -->
+
+         <script>
+        
+            class Shape{
+                
+                constructor(){
+                    console.log("Shape Constructor");
+                }
+                draw()
+                {
+                    console.log("Draw shape : ");
+                }
+            }
+    
+            
+            class Circle{
+    
+                constructor(){
+                    
+                    this.shape = new Shape(); // Deligate : transfer my responsibility to another
+                    console.log("Circle Constructor");
+                }
+                draw(){
+                    this.shape.draw();  // Deligate : transfer my responsibility to another
+                    console.log("Draw Circle");
+                }
+                
+            }
+
+            let circle = new Circle();
+            circle.draw();        
+    
+
+        </script>
+    </body>
+</html>

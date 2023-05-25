@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <h3>Static mehtod</h3>
+        <p>
+            don't need to create object and can directly use from method of a class name is static method
+            <br>
+            eg : Math.min(4,2)
+        </p>
+
+        <script>
+
+            // don't need to create object and can directly use from method of a class name is static method
+            let na = Math.PI;
+            console.log("PI=", na)
+
+            class OurMath{
+                static c_min(a,b){
+                    return a>b ? b : a
+                }
+            }
+
+            let miniz = OurMath.c_min(2,1);
+            console.log("our math",miniz);
+
+            
+        </script>
+    </body>
+</html>

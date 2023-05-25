@@ -1,0 +1,23 @@
+<html>
+    <h3>Void</h3>
+    <ul>
+        <li>Void</li>
+        <li>return undefined instead of value {void function()}</li>
+    </ul>
+    <div class="">
+        <!-- <form action="" submit="javascript:void(0)"> -->
+        <form action="" submit="void doSomething()">
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        function doSomething()
+        {
+            console.log('Do something');
+            //return 'something';
+        }
+        let result = void (doSomething);
+        console.log('result ',result);
+    </script>
+</html>

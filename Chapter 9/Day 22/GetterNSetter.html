@@ -1,0 +1,50 @@
+<html>
+    <body>
+        <h3>Getter and Setter</h3>
+        <h3>Public, Private</h3>
+        
+
+        <script>
+            
+            class Circle{
+                constructor(radius){
+                    this.radius = radius;
+                }
+
+                //getter
+                get area(){
+                    console.log("Area ...")
+                    return Math.PI * this.radius * this.radius
+                }
+            }
+
+            let circle = new Circle(3);
+            console.log("Circle = ",circle.area);
+
+            class Human{
+                #_age; // Private Field
+                constructor(name,age){
+                    this.name = name;
+                    this._age = age;
+                }
+
+                //setter
+                set ageSet(newAge){
+                    if(newAge >= 0 && newAge <= 100){
+                        this._age = newAge   
+                    }
+                }
+                
+                //getter
+                get ageGet(){
+                    return this._age
+                }
+
+            }
+
+            let p1 = new Human();
+            p1.ageSet = 40
+            console.log("P = ",p1.ageGet)
+        </script>
+    </body>
+</html>
