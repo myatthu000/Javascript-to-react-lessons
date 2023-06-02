@@ -1,0 +1,37 @@
+<html>
+    <body>
+        <h3>Generator</h3>
+        <!-- 
+            eventLoop အရဆိုရင် webapi ( closure -> obj return ပိတ်မိ ) ထဲမှာ next call မှ callstack queue ပို့အလုပ်လုပ်
+
+            difference between Iterator and *Generator
+                Iterator က sequence ပြန်ပေး
+                function ကို delay လုပ်ပေး
+            
+         -->
+        <script>
+
+            function* getGenerator(){
+                console.log('first step');
+                yield 1;
+                console.log('second step');
+                yield 2;
+                console.log('third step');
+                yield 3;
+                console.log('third step');
+                return ;
+            }
+
+            let gen = getGenerator();
+            // console.log('Gen -> ',gen.next());
+            // console.log('Gen -> ',gen.next());
+            // console.log('Gen -> ',gen.next());
+            // console.log('Gen -> ',gen.next());
+
+            for(let i of gen){
+                console.log('Gen -> ',i);
+            }
+
+        </script>
+    </body>
+</html>

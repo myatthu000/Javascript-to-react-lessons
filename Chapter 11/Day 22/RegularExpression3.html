@@ -1,0 +1,65 @@
+<html>
+    <body>
+        <h3>Regular Expression</h3>
+
+        <script>
+            
+            let re = new RegExp();
+            re = /a*/;
+
+            console.log('/a*/.test moon', re.test('moon'));
+            console.log('/a*/.test aaa', re.test('aaa'));
+            console.log('')
+
+            re = /a+/;
+            console.log('/a+/.test moon', re.test('moon'));
+            console.log('/a+/.test aaa', re.test('aaa'));
+            console.log('/a+/.test a', re.test('a'));
+            console.log('/a+/.test a111', re.test('a111'));
+            console.log('')
+
+            const personList = `First_Name: John, Last_Name: Doe First_Name: Jane, Last_Name: Smith`;
+
+            const regexpNames = /First_Name: (\w+), Last_Name: (\w+)/gm;
+            for(const match of personList.matchAll(regexpNames)){
+                console.log(`Hello ${match[1]} ${match[2]}`);
+            }
+            console.log('')
+
+
+            re = /a?/g;
+            console.log('/a?/.test moon', re.test('moon'));
+            console.log('/a?/.test aaa', re.test('aaa'));
+            console.log('/a?/.test a', re.test('a'));
+            console.log('/a?/.test ', re.test(''));
+            console.log('')
+
+            re = /(\+95)?\d+/
+            console.log(`${re} :21323123`, re.test('21323123'));
+            console.log(`${re} :+9521323123`, re.test('+9521323123'));
+            console.log('')
+
+            re = /\d{3}/; //at least 3 and above
+            console.log(`${re} :+9521323123`, re.test('+9521323123'));
+            console.log(`${re} :+9`, re.test('+9'));
+            console.log('')
+
+            re = /\d{3,}/g; //at least 3 to 5 and above
+            console.log(`${re} :95`, re.test('95'));
+            console.log(`${re} :952`, re.test('95332'));
+            console.log(`${re} :9`, re.test('9'));
+            console.log('')
+
+            re = /\d{3,5}/g; //at least 3 to 5 and above
+            console.log(`${re} :+95`, re.test('+95'));
+            console.log(`${re} :+95332`, re.test('+95332'));
+            console.log(`${re} :95322`, re.test('95322'));
+            console.log(`${re} :+9`, re.test('+9'));
+            console.log('')
+
+
+
+
+        </script>
+    </body>
+</html>

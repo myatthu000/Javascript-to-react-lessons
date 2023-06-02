@@ -1,0 +1,38 @@
+<html>
+    <body>
+        <h3>Regular Expression</h3>
+
+        <script>
+
+            // let re = new RegExp();
+            
+            re = /(a|b)+/;
+            console.log('Re.test aaab', re.test('aaab'));
+            console.log('Re.test abab', re.test('abab'));
+            console.log('Re.test ca', re.test('ca'));
+            console.log('Re.test dd', re.test('dd'));
+            console.log('')
+
+            re = /Script$/;
+
+            console.log('/Script$/.test JavaScript', re.test('JavaScript'));
+            console.log('/Script$/.test NativeScript', re.test('NativeScript'));
+            console.log('/Script$/.test Java', re.test('Java'));
+            console.log('')
+
+            re = /\bm/;
+            console.log('/\bm/.test moon', re.test('moon'));
+            console.log('/\bm/.test demon', re.test('demon'));
+            console.log('/\bm/.test demon milk', re.test('demon milk'));
+            console.log('')
+
+            re = /\Bm/;
+            console.log('/\Bm/.test moon', re.test('moon'));
+            console.log('/\Bm/.test demon', re.test('demon'));
+            console.log('/\Bm/.test demon milk', re.test('demon milk'));
+            console.log('')
+
+
+        </script>
+    </body>
+</html>

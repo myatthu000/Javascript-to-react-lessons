@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <h3>Date Arithmetic (use moment.js packages)</h3>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+        <script>
+            let date  = new Date();
+            let milisecond = date.getTime();
+            let a = moment(milisecond);
+            console.log('moment a:',a.toDate())
+
+            let b = a.add(1, 'week');
+            console.log('moment b:',b.toDate())
+            console.log('moment b:',b.format('MMMM Do YYYY, h:mm:ss a'));
+
+
+        </script>
+    </body>
+</html>

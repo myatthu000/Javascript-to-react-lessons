@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <h3>Garbage collection</h3>
+        <p> GC ဆိုတာအမှိုက်သိမ်းသူ </p> 
+        <p>If a variable/obj can/has a reference, it cannot collect as a gurbage collect</p>
+        <p>Object become GC when no one can reference</p>
+        <button type="button" id="btnAllocate">Allocate</button>
+        <button type="button" id="btnAssignNull">Assig Null</button>
+
+        <script>
+            
+            let arr =[] ;
+            document.getElementById("btnAllocate").addEventListener('click',()=>{
+                console.log('Allocate')
+                for(let i=0;i<10;i++){
+                    arr.push(new Array(100_000))
+                }
+                // arr = new Array(100_000);
+            })
+
+            document.getElementById("btnAssignNull").addEventListener('click',()=>{
+                console.log('Dellocate')
+                arr = null
+                // arr = new Array(100_000);
+            })
+            
+        </script>
+    </body>
+</html>

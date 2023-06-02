@@ -1,0 +1,81 @@
+<html>
+    <body>
+        <h3>Regular Expression</h3>
+
+        <script>
+
+            let re = /ab+c/;
+            console.log('/abbbbbbc/ :',re.test('abbbbbbc'));
+            console.log('/abbbbbbc/ :',re.test('abc'));
+            console.log('/abbbbbbc/ :',re.test('abvvdsec'));
+            console.log('')
+
+            console.log('/assdfabvvcabbbbc/ :','assdfabvvcabbbbc'.match(re));
+            console.log('')
+
+            re = /[xyz]/;
+            console.log('/abbbbbbc/ :',re.test('abbbzbbc'));
+            console.log('/xyab/ :',re.test('xyab'));
+            console.log('/xyz/ :',re.test('xyz'));
+            console.log('/xyyyz/ :',re.test('xyyyz'));
+            console.log('')
+
+            re = /^09[0-9]+/;
+            console.log('/[0-9]/ 09393595698:',re.test('09393595698'));
+            console.log('/[0-9]/ 39359569:',re.test('039359569'));
+            console.log('/[0-9]/ x393595698z:',re.test('x393595698z'));
+            console.log('/[0-9]/ xyyy:',re.test('xyyy'));
+            console.log('')
+
+            re = /^Java/;
+            
+            console.log(`${re} :Java Script`,re.test('Java Script'));
+            console.log(`${re} :JavaScript`,re.test('JavaScript'));
+            console.log(`${re} : JavaScript`,re.test(' JavaScript'));
+            console.log('')
+
+            re = /^Java.b/; // . mean any one charactor in front of b
+            console.log(`${re} :Javacb`,re.test('Javacb'));
+            console.log(`${re} :Javaedb`,re.test('Javaedb'));
+            console.log(`${re} :JavaScript b`,re.test('JavaScript b'));
+            console.log('')
+
+            re = /\d+/; // \d+ or [0-9] mean any digit
+            console.log(`${re} :Javacb23232`,re.test('Javacb23232'));
+            console.log(`${re} :9090976`,re.test('9090976'));
+            console.log(`${re} :343JavaScript b`,re.test('343JavaScript b'));
+            console.log('')
+
+            re = /\D+/; // reverse of \d
+            console.log(`${re} :Javacb23232`,re.test('Javacb23232'));
+            console.log(`${re} :9090976`,re.test('9090976'));
+            console.log(`${re} :343JavaScript b`,re.test('343JavaScript b'));
+            console.log('')
+
+            re = /\w+/; // word [A-Za-z0-9_]
+            console.log(`${re} :Javacb23232`,re.test('Javacb23232'));
+            console.log(`${re} :9090976`,re.test('9090976'));
+            console.log(`${re} :343JavaScript b`,re.test('343JavaScript b'));
+            console.log('')
+
+            re = /\W+/; // not word [^A-Za-z0-9_]
+            console.log(`${re} :Javacb23232`,re.test('Javacb23232'));
+            console.log(`${re} :9090976`,re.test('9090976'));
+            console.log(`${re} :343JavaScript b`,re.test('343JavaScript b'));
+            console.log('')
+
+            re = /\s+/;
+            console.log('/\s+/ hello hi', re.test('hello hi'));
+            console.log('/\s+/ Abe_', re.test('Abe_'));
+            console.log('')
+
+            re = /\S+@\S+\.\S+/;
+            console.log(`${re} :hello@gmail.com`, re.test('hello@gmail.com'));
+            console.log(`${re} :hello@gmail.33322`, re.test('hello@gmail.33322'));
+            console.log(`${re} :hello@gmail`, re.test('hello@gmail'));
+            console.log('')
+
+
+        </script>
+    </body>
+</html>

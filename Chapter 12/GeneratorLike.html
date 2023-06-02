@@ -1,0 +1,42 @@
+<html>
+    <body>
+        <h3>Generator Like function</h3>
+        <!-- 
+            [Symbol.iterator]() shi yin generator ko loop lo ya tae (for ... of)
+         -->
+        <script>
+            function getGenerator()
+            {
+                let data = [];
+                function cus_yield(item)
+                {
+                    data.push(item);
+                }
+                cus_yield(1);
+                cus_yield(2);
+                cus_yield(3);
+                cus_yield(4);
+                return{
+                    next(){
+                        return{
+                            value: data.shift(),
+                            done: data.length ==0,
+                        }
+                    }
+                }
+            }
+
+            let gen = getGenerator();
+            // console.log('Gen like ',gen.next());
+            // console.log('Gen like ',gen.next());
+            // console.log('Gen like ',gen.next());
+            // console.log('Gen like ',gen.next());
+            // console.log('Gen like ',gen.next());
+
+            // for(let i of gen){
+            // console.log('Gen like ',i.next());
+            // }
+
+        </script>
+    </body>
+</html>

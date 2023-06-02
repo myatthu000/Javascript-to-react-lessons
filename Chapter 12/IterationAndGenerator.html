@@ -1,0 +1,36 @@
+<html>
+    <body>
+        <h3>Iteration and Generator</h3>
+        <h3>Iterator</h3>
+        <h3>[Sumbol.iterator]() protocol</h3>
+        <h3>Range</h3>
+        <h3>Generator (adv concept --> promise,)</h3>
+
+        <script>
+            let arr = [1,2,3,4];
+            for(const i of arr)
+            {
+                console.log('I ',i);
+            }
+
+            // very useful for tree structure;
+            let iterable = [99,33,200];
+            let iterator = iterable[Symbol.iterator]();
+            // for(let result = iterator.next(); !result.done; result = iterator.next()) 
+            // {
+            //     console.log(result.value) // result.value == 99
+            // }
+
+            for(let i of iterator){
+                console.log(i.next());
+            }
+
+            // console.log(iterator.next())
+            // console.log(iterator.next())
+            // console.log(iterator.next())
+            // console.log(iterator.next())
+
+
+        </script>
+    </body>
+</html>

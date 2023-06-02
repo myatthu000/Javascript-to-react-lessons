@@ -1,0 +1,45 @@
+<html>
+    <body>
+        <h3>Generator 3</h3>
+        <!-- 
+            Generator : parameter pass and forth
+         -->
+        <script>
+            function *oneAndDone()
+            {
+                yield 1;
+                return 'done';
+            }
+
+            for(let i of oneAndDone()){
+                console.log('i ',i)
+            }
+
+            let gen = oneAndDone();
+            console.log('i ',gen.next())
+            console.log('i ',gen.next())
+            console.log('i ',gen.next())
+
+            function *smallNumber()
+            {
+                // console.log('First');
+                let y1 = yield 1;
+                console.log('First ',y1);
+                let y2 = yield 2;
+                console.log('Second ',y2);
+            }
+
+            console.log(' ');
+
+            // Generator : parameter pass and forth
+
+            gen = smallNumber();
+            console.log('Next ',gen.next());
+            console.log('Next ',gen.next('Hello'));
+            console.log('Next ',gen.next('World'));
+            console.log('Next ',gen.next('Hi'));
+            // console.log('Next ',gen.next());
+
+        </script>
+    </body>
+</html>

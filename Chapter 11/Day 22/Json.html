@@ -1,0 +1,56 @@
+<html>
+    <body>
+        <h3>Json</h3>
+
+        <script>
+
+            let obj = {
+                name: 'Tk',
+                age: 45,
+                _:"Data",
+                milestone: ['something','nothing'],
+                display(){
+                    console.log(`this is name ${this.name}`);
+                }
+            };
+
+            
+            let str = JSON.stringify(obj); //obj -> str
+            console.log('Str :',str);
+
+            let obj2 = JSON.parse(str,(key,value) => {
+                if (key === '_'){
+                    return undefined;
+                }
+                return value;
+            }); //str -> obj
+            console.log('Obj :',obj2);
+
+            let str2 = JSON.stringify(obj,["age","name"]); //obj -> str
+            console.log('str2 :',str2);
+
+            let address = {
+                city: 'YGN',
+            }
+
+            let user = {
+                name: 'username',
+                address: address,
+                credential: 'Something',
+                toJSON(){
+                    console.log('ToJson');
+                    let that = this;
+                    return {
+                        username : that.name,
+                        city : that.city,
+                        // address: that.address,
+                    }
+                }
+            }
+
+            let str3 = JSON.stringify(user);
+            console.log('Str3 :',str3);
+
+        </script>
+    </body>
+</html>

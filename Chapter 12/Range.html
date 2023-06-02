@@ -1,0 +1,58 @@
+<html>
+    <body>
+        <h3>Range</h3>
+
+        <!-- 
+            UseCase : complex Tree structure transfer
+            
+            Logic : Iterator mr next ko call mr next mr{value and done} pr ya mae
+            not finis value: value | done => value :undefined
+            not finish done: false | done => done :true
+         -->
+
+        <script>
+            class Range
+            {
+                constructor(to)
+                {
+                    this.to = to;
+                }
+
+                [Symbol.iterator]() // 1
+                {
+                    let i =0;
+                    let that = this;
+                    return{
+                        next()  // 2
+                        {
+                            return{     //3
+                                value: i++,
+                                done: i== that.to+1,
+                            };
+                        },
+                        
+                        [Symbol.iterator]() 
+                        { 
+                            return this; 
+                        }
+                    };
+                }
+            };
+
+            // let iterator = new Range(4)[Symbol.iterator]();
+            // console.log('Iterator = ',iterator);
+            // console.log('Iterator = ',iterator.next());
+            // console.log('Iterator = ',iterator.next());
+            // console.log('Iterator = ',iterator.next());
+            // console.log('Iterator = ',iterator.next());
+            // console.log('Iterator = ',iterator.next());
+            
+            // for of --> iterator protocol
+
+            for(let i of new Range(4)[Symbol.iterator]()){
+                console.log('I : ',i);
+            };
+            
+        </script>
+    </body>
+</html>

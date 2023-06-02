@@ -1,0 +1,42 @@
+<html>
+    <body>
+        <h3>Timer</h3>
+        <ol>
+            <li><h3>setInterval()</h3></li>
+            <li><h3>clearInterval()</h3></li>
+            <li><h3>setTimeOut()</h3></li>
+        </ol>
+
+        <div id="lblTime"></div>
+        <button id="stopTime">Stop setInterval</button>
+        <button id="btn3">Stop setTimeOut</button>
+
+        <script>
+
+            let timer, timer2;
+            // always do after specific secs
+            timer = setInterval(()=>{
+                document.getElementById("lblTime").innerText = new Date();
+                console.log('Timer :',new Date());
+            },1000);
+
+            
+            document.getElementById("stopTime").addEventListener('click',()=>{
+                clearInterval(timer);
+            });
+
+
+            // one time do
+            timer2 = setTimeout(()=>{
+                console.log('Timer timeout',new Date());
+            },3000);
+
+            document.getElementById("btn3").addEventListener('click',()=>{
+                clearTimeout(timer2);
+            })
+            
+
+
+        </script>
+    </body>
+</html>

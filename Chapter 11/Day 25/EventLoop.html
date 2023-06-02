@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <h3>EventLoop</h3>
+        <p><b>Js -> Single thread</b></p>
+
+        <!-- 
+            Cannot block because it is Single thread. 
+            Queue is work when callstack is empty.
+
+            Problems: EventLoopProblem.js 
+           ( current callstack ka empty phit to ma Queue ka a lote lote mr. If Callstack is not empty there will be no work to do in Queue
+            is called Eventloop.)
+
+            Cannot Do Heavy Computation : If it is do there will be block in callstack
+
+         -->
+
+
+        <script>
+            
+            setTimeout(()=>{
+                console.log('World');
+            },0);
+            console.log('Hello');
+
+        </script>
+    </body>
+</html>

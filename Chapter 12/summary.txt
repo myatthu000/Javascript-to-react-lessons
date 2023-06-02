@@ -1,0 +1,12 @@
+Generator and Iteration
+    Iteration (array)
+    Iteration ([Symbol.iterator]())
+    Range
+    Generator (1,2,3 like)
+        Usecase :(use in delay computation, Async, Await,) Lazy Evaluation(functional programming : it will not do anything if not necessaory)
+    Lazy Evaluation
+        filter Generator
+        res: {
+            https://benjaminwoojang.medium.com/functional-programming-with-javascript-generator-lazy-functions-41a2b589b670
+        }
+        

@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <h3>Garbage collection</h3>
+        <p> GC ဆိုတာအမှိုက်သိမ်းသူ </p> 
+        <p>If a variable/obj can/has a reference, it cannot collect as a gurbage collect</p>
+        <p>Object become GC when no one can reference</p>
+        <button type="button" id="btnAllocate">Allocate</button>
+        
+
+        <script>
+            
+            let arr =[] ;
+            document.getElementById("btnAllocate").addEventListener('click',()=>{
+                console.log('Allocate')
+                for(let i=0;i<10;i++){
+                    arr.push(new Uint8Array(100_000));
+                    // arr.push(new Array(100_000));
+                }
+            })
+
+            // buffer can be use same memory location 
+            let buffer = new ArrayBuffer(1024*1024); // one memory location
+            let asbytes = new Uint8Array(buffer); //use from 
+            let asints = new Int32Array(buffer);
+            asints[0] = 200;
+            console.log('Asbytes ',asbytes[0]);
+            
+        </script>
+    </body>
+</html>

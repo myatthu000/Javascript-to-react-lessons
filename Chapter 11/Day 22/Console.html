@@ -1,0 +1,67 @@
+<html>
+    <body>
+        <h3>Console API</h3>
+
+        <script>
+            let arr = [
+                {
+                    name: 'One',
+                    value: 1,
+                },
+                {
+                    name: 'Two',
+                    value: 2,
+                }
+            ];
+
+            console.time('timelog');
+            console.log('ObjArr :',arr);
+            // called reference , not Lazing Loading 
+            // thats why they value of index 0's value and index 1 value is 4
+            arr[0].value = 4;
+            console.log('ObjArr :',arr);
+
+            console.error('')
+            console.warn('')
+            console.table(arr)
+            console.table(["apples", "oranges", "bananas"]);
+
+            console.group();
+            console.log('Level 1');
+
+            console.group();
+            console.log('Level 2');
+            console.groupEnd()
+            console.group();
+            console.log('Level 3');
+            console.groupEnd()
+            console.groupEnd()
+
+            console.dir(arr)
+            console.timeLog('timelog');
+            console.timeEnd('timelog');
+
+            function div(a,b){
+                var result = a/b;
+                console.assert(!(isNaN(a) || isNaN(b)),'A or b is NaN');
+                console.log(result);
+                return result;
+            }
+
+            div(10/20);
+
+            function one()
+            {
+                function two()
+                {
+                    console.log("Two");
+                    console.trace();
+                }
+                two();
+            }
+            one();
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <h3>Internationalization API</h3>
+
+        <script>
+                let euros = Intl.NumberFormat("es", {style: "currency",currency: "EUR"});
+                console.log("ES :",euros.format(10))
+
+                let pounds = Intl.NumberFormat("en", {style: "currency",currency: "GBP"});
+                console.log("EN :",pounds.format(1000))
+
+                let arabic = Intl.NumberFormat("ar", {useGrouping: false}).format;
+                console.log("Arabic :",arabic(1234567890));
+
+                
+        </script>
+    </body>
+</html>

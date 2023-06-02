@@ -1,0 +1,32 @@
+<html>
+    <body>
+        <h3>Date Time</h3>
+
+        <script>
+            let date1 = new Date();
+            console.log('Date :',date1)
+
+            let date = new Date();
+            console.log('Date :',date)
+
+            let milisecond = date.getTime();
+            console.log('milisecond :',milisecond);
+
+            date = new Date(milisecond);
+            console.log('Date :',date)
+
+            let json = {
+                date : date.getTime(),
+            }
+            console.log('')
+            console.log('Json :',JSON.stringify(json));
+            console.log('Year :',date.getFullYear());
+            console.log('Day :',date.getDay());
+            console.log('Date :',date.getDate());
+            console.log('Month :',date.getMonth());
+            console.log('')
+
+
+        </script>
+    </body>
+</html>
